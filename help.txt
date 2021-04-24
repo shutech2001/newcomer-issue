@@ -1,0 +1,9 @@
+sys.path.append(os.path.expanduser('/Applications'))
+import psico.fullinit
+
+scp -r もって行きたいディレクトリ　先のディレクトリ
+
+iqrsh -l h_rt=24:00:00
+module load singularity
+
+singularity build ~.sif docker://username/repository-name
