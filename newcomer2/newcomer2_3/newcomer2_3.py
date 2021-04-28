@@ -21,9 +21,9 @@ def inner_atom(selection='(all)', quiet=1):
     rg = math.sqrt(rr/tmass - mm)
 
     square_dis = [math.sqrt((center[0]-a)**2 + (center[1]-b)**2 + (center[2]-c)**2) for a,b,c in x]
-    in_out_radius = [model[idx]  for idx, dis in enumerate(square_dis) if dis - rg < 0]
+    in_out_radius = [model[idx] for idx, dis in enumerate(square_dis) if dis - rg < 0]
     for atom in in_out_radius:
-        selection = 'rank ' + str(atom.id)
+        selection = 'id ' + str(atom.id)
         cmd.color('red', selection, quiet=1)
 
 

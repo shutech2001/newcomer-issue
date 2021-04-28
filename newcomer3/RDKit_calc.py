@@ -1,6 +1,3 @@
-# $ python3 newcomer3_4.py fukunishi_data.csv
-
-import sys
 import numpy as np
 import pandas as pd
 from rdkit import Chem, DataStructs
@@ -21,7 +18,7 @@ class RDKit_calculator:
 			desc_2d.append(ds)
 		tmp_df = pd.DataFrame(desc_2d, columns=header)
 		desc2_vector = tmp_df.values
-		print(desc2_vector)
+		return desc2_vector
 
 	def compute_ECFP4(self):
 		ecfp4_data = []
@@ -33,7 +30,7 @@ class RDKit_calculator:
 				ecfp4_data.append(arr)
 		tmp_df = pd.DataFrame(ecfp4_data)
 		ecfp4_vector = tmp_df.values
-		print(ecfp4_vector)
+		return ecfp4_vector
 
 	def compute_3D_desc(self):
 		ETKDGv2_mols = []
@@ -57,9 +54,4 @@ class RDKit_calculator:
 			desc_3d.append(ds)
 		tmp_df = pd.DataFrame(desc_3d, columns=header)
 		desc3_vector = tmp_df.values
-		print(desc3_vector)
-
-df = pd.read_csv(sys.argv[1])
-test_smiles = df['SMILES'][:5].values
-RDKit_descriptor = RDKit_calculator(test_smiles)
-RDKit_descriptor.compute_3D_desc()
+		return desc3_vector

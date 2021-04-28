@@ -15,6 +15,9 @@ RUN pip install --upgrade pip && \
 	conda config --add channels conda-forge && \
 	conda config --add channels bioconda && \
 	conda install biopython && \
-	conda install rdkit
+	conda install rdkit && \
+	conda install scikit-learn && \
+	conda install lightgbm && \
+	conda install optuna
 	
 WORKDIR /
