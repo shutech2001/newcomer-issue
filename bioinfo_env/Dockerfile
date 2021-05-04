@@ -2,7 +2,8 @@ FROM ubuntu:latest
 RUN apt-get update && apt-get install -y \
 	sudo \
 	wget \
-	vim
+	vim \
+	openssh-client
 WORKDIR /opt
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-py39_4.9.2-Linux-x86_64.sh && \
 	sh /opt/Miniconda3-py39_4.9.2-Linux-x86_64.sh -b -p /opt/miniconda3 && \
@@ -18,6 +19,9 @@ RUN pip install --upgrade pip && \
 	conda install rdkit && \
 	conda install scikit-learn && \
 	conda install lightgbm && \
-	conda install optuna
-	
+	conda install optuna && \
+	conda install pytorch && \
+	conda install tensorflow && \
+	conda install keras
+
 WORKDIR /
