@@ -76,7 +76,7 @@ Q^2 : 0.41783577938021654
 
 
 
-当たっているもの
+当たっているもの  
 ![11](newcomer3/newcomer3_6_in/1.png)
 ![12](newcomer3/newcomer3_6_in/2.png)
 ![13](newcomer3/newcomer3_6_in/3.png)
@@ -125,7 +125,7 @@ Q^2 : 0.41783577938021654
 
 
 
-当たっているもの
+当たっているもの  
 ![51](newcomer3/newcomer3_7_ecfp4_in/1.png)
 ![52](newcomer3/newcomer3_7_ecfp4_in/2.png)
 ![53](newcomer3/newcomer3_7_ecfp4_in/3.png)
@@ -165,7 +165,7 @@ Q^2 : 0.41783577938021654
 
 
 
-当たっているもの
+当たっているもの  
 ![81](newcomer3/newcomer3_7_3d_in/1.png)
 ![82](newcomer3/newcomer3_7_3d_in/2.png)
 ![83](newcomer3/newcomer3_7_3d_in/3.png)
