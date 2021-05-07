@@ -3,5 +3,5 @@
 from rdkit import Chem
 from rdkit.Chem import Draw
 
-mol = Chem.MolFromSmiles('COc1ccc(Cl)cc1Cc1c[nH]c2c1cc(C(=O)Nc1nc(CC(=O)[O-])cs1)cc2')
-Draw.MolToFile(mol, 'in.png')
+mol = Chem.MolFromSmiles('c1(C(=O)OC)c(C(=O)OC)cccc')
+Draw.MolToFile(mol, 'newcomer3_7_ecfp4_out/21.png')
