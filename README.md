@@ -61,7 +61,9 @@ Q^2 : 0.41783577938021654
 |CHEMBL905612|3|0|0|  
 |Enamine|1|0|0|
 
-各分子の構造  
+テストデータ数が少ないため一概には言えないが，Astellasの化合物は当たっているデータ数の割合が高い。
+
+##### 各分子の構造  
 外れているもの  
 ![1](newcomer3/newcomer3_6_out/1.png)
 ![2](newcomer3/newcomer3_6_out/2.png)
@@ -99,7 +101,9 @@ Q^2 : 0.41783577938021654
 |CHEMBL905612|3|2|0|  
 |Enamine|1|1|0|
 
-各分子の構造  
+CHEMBL905613, CHEMBL3430218, CHEMBL905612の化合物で外れている割合が高く，2D記述子同様Astellasの化合物は当たっている。
+
+##### 各分子の構造  
 外れているもの  
 ![21](newcomer3/newcomer3_7_ecfp4_out/1.png)
 ![22](newcomer3/newcomer3_7_ecfp4_out/2.png)
@@ -146,7 +150,9 @@ Q^2 : 0.41783577938021654
 |CHEMBL905612|3|0|0|  
 |Enamine|1|1|0|
 
-各分子の構造  
+CHEMBL905613の化合物で外れている割合が高く，2D記述子, ECFP4同様にAstellasの化合物は当たっている。
+
+##### 各分子の構造  
 外れているもの  
 ![61](newcomer3/newcomer3_7_3d_out/1.png)
 ![62](newcomer3/newcomer3_7_3d_out/2.png)
