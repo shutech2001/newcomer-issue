@@ -28,6 +28,7 @@ import optuna
 #*================================================*
 #Prepare for searching hyper parameter 
 
+#test regressor
 def result_reg(reg):
 	reg.fit(X_train, y_train)
 	y_pred = reg.predict(X_test)
@@ -36,6 +37,7 @@ def result_reg(reg):
 	print('Q^2 : ' + str(r2_score(y_test, y_pred)))
 	print('#---------------------------------------#')
 
+# Ridge regression
 def objective_Ridge(trial):
 	alpha = trial.suggest_loguniform('alpha', 1e-4, 15)
 	max_iter = trial.suggest_loguniform('max_iter', 1, 1000)
@@ -53,11 +55,12 @@ def objective_Ridge(trial):
 		RMSE.append(math.sqrt(mean_squared_error(y_val, y_pr)))
 	return np.array(RMSE).mean()
 
+#Bayesian Ridge regression
 def objective_BRidge(trial):
 	alpha_1 = trial.suggest_loguniform('alpha_1', 1e-8, 1e-4)
-	alpha_2 = trial.suggest_loguniform('alpha_1', 1e-8, 1e-4)
-	lambda_1 = trial.suggest_loguniform('alpha_1', 1e-8, 1e-4)
-	lambda_2 = trial.suggest_loguniform('alpha_1', 1e-8, 1e-4)
+	alpha_2 = trial.suggest_loguniform('alpha_2', 1e-8, 1e-4)
+	lambda_1 = trial.suggest_loguniform('lambda_1', 1e-8, 1e-4)
+	lambda_2 = trial.suggest_loguniform('lambda_2', 1e-8, 1e-4)
 	n_iter = trial.suggest_int('n_iter', 1, 500)
 
 	reg = BayesianRidge(alpha_1=alpha_1,
@@ -76,11 +79,12 @@ def objective_BRidge(trial):
 		RMSE.append(math.sqrt(mean_squared_error(y_val, y_pr)))
 	return np.array(RMSE).mean()
 
+#Suppor Vectore machine Regressor
 def objective_SVR(trial):
 	kernel = trial.suggest_categorical('kernel', ['linear', 'poly', 'rbf', 'sigmoid'])
 	gamma = trial.suggest_categorical('gamma', ['scale', 'auto'])
 	tol = trial.suggest_loguniform('tol', 1e-5, 1e-1)
-	C = trial.suggest_loguniform('C', 1e-4, 10)
+	C = trial.suggest_loguniform('C', 1e-5, 10)
 	epsilon = trial.suggest_loguniform('epsilon', 1e-4, 1e-1)
 
 	reg = svm.SVR(kernel=kernel,
@@ -99,6 +103,7 @@ def objective_SVR(trial):
 		RMSE.append(math.sqrt(mean_squared_error(y_val, y_pr)))
 	return np.array(RMSE).mean()
 
+#K Neighbors regression
 def objective_KN(trial):
 	n_neighbors = trial.suggest_int('n_neighbors', 1, 15)
 	weights = trial.suggest_categorical('weights', ['uniform', 'distance'])
@@ -121,6 +126,7 @@ def objective_KN(trial):
 		RMSE.append(math.sqrt(mean_squared_error(y_val, y_pr)))
 	return np.array(RMSE).mean()
 
+#Random forest regression
 def objective_RFR(trial):
 	n_estimators = trial.suggest_int('n_estimators', 50, 200)
 	max_depth = trial.suggest_int('max_depth', 100, 500)
@@ -146,7 +152,7 @@ def objective_RFR(trial):
 		RMSE.append(math.sqrt(mean_squared_error(y_val, y_pr)))
 	return np.array(RMSE).mean()
 
-
+#Light GBM regression
 def objective_LGB(trial):
 	boosting_type = trial.suggest_categorical('boosting_type', ['gbdt', 'goss'])
 	num_leaves = trial.suggest_int('num_leaves', 30, 100)
@@ -206,38 +212,38 @@ X = sc.fit_transform(X)
 #split data
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=95, random_state=0)
 
-study = optuna.create_study()
-study.optimize(objective_Ridge, n_trials=100)
-print('Ridge : Best parameters')
-print(study.best_params)
-result_reg(Ridge(**study.best_params))
+# study = optuna.create_study()
+# study.optimize(objective_Ridge, n_trials=200)
+# print('Ridge : Best parameters')
+# print(study.best_params)
+# result_reg(Ridge(**study.best_params))
+
+# study = optuna.create_study()
+# study.optimize(objective_BRidge, n_trials=200)
+# print('BayesianRidge : Best parameters')
+# print(study.best_params)
+# result_reg(BayesianRidge(**study.best_params))
 
 study = optuna.create_study()
-study.optimize(objective_BRidge, n_trials=100)
-print('BayesianRidge : Best parameters')
-print(study.best_params)
-result_reg(BayesianRidge(**study.best_params))
-
-study = optuna.create_study()
-study.optimize(objective_SVR, n_trials=100)
+study.optimize(objective_SVR, n_trials=200)
 print('SVR : Best parameters')
 print(study.best_params)
 result_reg(svm.SVR(**study.best_params))
 
-study = optuna.create_study()
-study.optimize(objective_KN, n_trials=100)
-print('KNeighborsRegressor : Best parameters')
-print(study.best_params)
-result_reg(neighbors.KNeighborsRegressor(**study.best_params))
+# study = optuna.create_study()
+# study.optimize(objective_KN, n_trials=200)
+# print('KNeighborsRegressor : Best parameters')
+# print(study.best_params)
+# result_reg(neighbors.KNeighborsRegressor(**study.best_params))
 
-study = optuna.create_study()
-study.optimize(objective_RFR, n_trials=100)
-print('RFR : Best parameters')
-print(study.best_params)
-result_reg(RFR(**study.best_params))
+# study = optuna.create_study()
+# study.optimize(objective_RFR, n_trials=200)
+# print('RFR : Best parameters')
+# print(study.best_params)
+# result_reg(RFR(**study.best_params))
 
-study = optuna.create_study()
-study.optimize(objective_LGB, n_trials=100)
-print('LGB : Best parameters')
-print(study.best_params)
-result_reg(lgb.LGBMRegressor(**study.best_params))
+# study = optuna.create_study()
+# study.optimize(objective_LGB, n_trials=200)
+# print('LGB : Best parameters')
+# print(study.best_params)
+# result_reg(lgb.LGBMRegressor(**study.best_params))

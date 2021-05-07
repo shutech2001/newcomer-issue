@@ -1,11 +1,19 @@
+#PyMOL
+
 sys.path.append(os.path.expanduser('/Applications'))
 import psico.fullinit
 
-scp -r もって行きたいディレクトリ　先のディレクトリ
+run ~.py
+
+#ssh
+
+scp -r もって行きたいディレクトリ　username@hogehoge:先のディレクトリ
+
+ssh 19B12223@login.t3.gsic.titech.ac.jp tar -cf - /home/2/19B12223/newcomer-issue/newcomer-groupwork | gzip > ~/Desktop/t3.zip
 
 iqrsh -l h_rt=24:00:00
 module load singularity
 
 singularity build ~.sif docker://username/repository-name
 
-singularity shell --nv bioinfo.sif
+singularity shell --nv bioinfo-env.sif

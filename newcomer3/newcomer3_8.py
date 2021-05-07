@@ -1,4 +1,4 @@
-# $ python3 newcomer3_5.py fukunishi_data.csv
+# $ python3 newcomer3_8.py fukunishi_data.csv
 
 import warnings
 warnings.simplefilter('ignore')
@@ -41,30 +41,44 @@ X_train = sc.transform(X_train)
 X_test = sc.transform(X_test)
 
 names = [
-	'Linear Regression',
-	'Ridge Regression',
-	'Bayesian ridge Regression',
-	'Support Vector Regression',
-	'Nearest Neighbors Regression',
-	'Random Forest Regression',
-	'LightGBM Regression'
+	'6',
+	'7_ecfp4',
+	'7_3d',
 ]
-
 regression = [
-	LinearRegression(),
-	Ridge(alpha=0.1),
-	BayesianRidge(),
-	svm.SVR(),
-	neighbors.KNeighborsRegressor(),
-	RFR(n_jobs=-1, random_state=0),
-	lgb.LGBMRegressor()
+	lgb.LGBMRegressor(
+	boosting_type='goss',
+	num_leaves=63,
+	max_depth=949,
+	learning_rate=0.02061442427834546,
+	n_estimators=382,
+	min_child_weight=9.93246483600419e-08,
+	min_child_samples=10,
+	reg_lambda=9.347509937659662e-08
+	),
+	svm.SVR(
+	kernel='linear',
+	gamma='auto',
+	tol=0.04452423351599806,
+	C=0.0008675341299462108,
+	epsilon=0.07707366424031765,
+	),
+	svm.SVR(
+	kernel='rbf',
+	gamma='auto',
+	tol=1.165972163302293e-07,
+	C=6.357352836096048,
+	epsilon=0.6999527204922626,
+	),
 ]
-
 for name, reg in zip(names, regression):
 	reg.fit(X_train, y_train)
 	y_pred = reg.predict(X_test)
-	print(name)
-	print('#---------------------------------------#')
-	print('MSE   : ' + str(mean_squared_error(y_test, y_pred)))
-	print('R^2   : ' + str(r2_score(y_test, y_pred)))
-	print('#---------------------------------------#')
+	diff = []
+	for true, pred in zip(y_test, y_pred):
+		diff.append(true - pred)
+	diff = np.array(diff)
+	data = np.array([df_test['SMILES'].values, df_test['Assay ID'].values, diff]).T
+	columns = ['SMILES', 'Assay ID', 'diff']
+	newcom_df = pd.DataFrame(data=data, columns=columns)
+	newcom_df.to_csv('newcomer3_{}_result.csv'.format(name))

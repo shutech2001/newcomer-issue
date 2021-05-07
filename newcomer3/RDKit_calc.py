@@ -22,12 +22,11 @@ class RDKit_calculator:
 
 	def compute_ECFP4(self):
 		ecfp4_data = []
-		for i in range(len(self.mols)):
-			ecfp4 = [AllChem.GetMorganFingerprintAsBitVect(mol, 2, 2048) for mol in self.mols]
-			for fp in ecfp4:
-				arr = np.zeros((1,))
-				DataStructs.ConvertToNumpyArray(fp, arr)
-				ecfp4_data.append(arr)
+		ecfp4 = [AllChem.GetMorganFingerprintAsBitVect(mol, 2, 2048) for mol in self.mols]
+		for fp in ecfp4:
+			arr = np.zeros((1,))
+			DataStructs.ConvertToNumpyArray(fp, arr)
+			ecfp4_data.append(arr)
 		tmp_df = pd.DataFrame(ecfp4_data)
 		ecfp4_vector = tmp_df.values
 		return ecfp4_vector
