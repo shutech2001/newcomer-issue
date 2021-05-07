@@ -74,6 +74,8 @@ Q^2 : 0.41783577938021654
 ![9](newcomer3/newcomer3_6_out/9.png)
 ![10](newcomer3/newcomer3_6_out/10.png)
 
+
+
 当たっているもの
 ![11](newcomer3/newcomer3_6_in/1.png)
 ![12](newcomer3/newcomer3_6_in/2.png)
@@ -121,6 +123,8 @@ Q^2 : 0.41783577938021654
 ![40](newcomer3/newcomer3_7_ecfp4_out/19.png)
 ![41](newcomer3/newcomer3_7_ecfp4_out/21.png)
 
+
+
 当たっているもの
 ![51](newcomer3/newcomer3_7_ecfp4_in/1.png)
 ![52](newcomer3/newcomer3_7_ecfp4_in/2.png)
@@ -158,6 +162,8 @@ Q^2 : 0.41783577938021654
 ![72](newcomer3/newcomer3_7_3d_out/12.png)
 ![73](newcomer3/newcomer3_7_3d_out/13.png)
 ![74](newcomer3/newcomer3_7_3d_out/14.png)
+
+
 
 当たっているもの
 ![81](newcomer3/newcomer3_7_3d_in/1.png)
