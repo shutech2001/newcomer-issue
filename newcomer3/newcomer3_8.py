@@ -78,7 +78,7 @@ for name, reg in zip(names, regression):
 	for true, pred in zip(y_test, y_pred):
 		diff.append(true - pred)
 	diff = np.array(diff)
-	data = np.array([df_test['SMILES'].values, df_test['Assay ID'].values, diff]).T
-	columns = ['SMILES', 'Assay ID', 'diff']
+	data = np.array([df_test['SMILES'].values, df_test['Assay ID'].values, y_test, y_pred, diff]).T
+	columns = ['SMILES', 'Assay ID', 'true', 'pred', 'diff']
 	newcom_df = pd.DataFrame(data=data, columns=columns)
 	newcom_df.to_csv('newcomer3_{}_result.csv'.format(name))
