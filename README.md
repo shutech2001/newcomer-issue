@@ -49,6 +49,8 @@ Q^2 : 0.41783577938021654
 
 ## 3-8  
 真値と予測値の差が0.75を超えるものを外れているデータ，0.05以内のものを当たっているデータと定義した。  
+膜透過係数の対数値
+![papp1](newcomer3/papp/1.gif)
 
 ### 3-6の結果考察
 |Assay ID|テストデータの数|外れているデータの数|当たっているデータの数|
@@ -64,19 +66,21 @@ Q^2 : 0.41783577938021654
 テストデータ数が少ないため一概には言えないが，Astellasの化合物は当たっているデータ数の割合が高い。
 
 ##### 各分子の構造  
-外れているもの  
+外れているもの(真値よりも大きく予測)  
 ![1](newcomer3/newcomer3_6_out/1.png)
 ![2](newcomer3/newcomer3_6_out/2.png)
 ![3](newcomer3/newcomer3_6_out/3.png)
-![4](newcomer3/newcomer3_6_out/4.png)
 ![5](newcomer3/newcomer3_6_out/5.png)
 ![6](newcomer3/newcomer3_6_out/6.png)
-![7](newcomer3/newcomer3_6_out/7.png)
 ![8](newcomer3/newcomer3_6_out/8.png)
-![9](newcomer3/newcomer3_6_out/9.png)
+![9](newcomer3/newcomer3_6_out/9.png)  
+外れているもの(真値よりも小さく予測)  
+![4](newcomer3/newcomer3_6_out/4.png)
+![7](newcomer3/newcomer3_6_out/7.png)
 ![10](newcomer3/newcomer3_6_out/10.png)
 
-
+真値よりも小さく予測したものに共通する構造は以下に示す構造である。
+![考察1](newcomer3/newcomer_inquiry/1.jpg)
 
 当たっているもの  
 ![11](newcomer3/newcomer3_6_in/1.png)
