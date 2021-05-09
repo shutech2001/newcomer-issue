@@ -99,7 +99,8 @@ Q^2 : 0.41783577938021654
 ![17](newcomer3/newcomer3_6_in/7.png)
 ![18](newcomer3/newcomer3_6_in/8.png)
 ![19](newcomer3/newcomer3_6_in/9.png)
-![20](newcomer3/newcomer3_6_in/10.png)
+![20](newcomer3/newcomer3_6_in/10.png)  
+
 
 ### 3-7-ECFP4の結果考察  
 |Assay ID|テストデータの数|外れているデータの数|当たっているデータの数|
@@ -139,7 +140,6 @@ CHEMBL905613, CHEMBL3430218, CHEMBL905612の化合物で外れている割合が
 ![36](newcomer3/newcomer3_7_ecfp4_out/16.png)
 ![41](newcomer3/newcomer3_7_ecfp4_out/21.png)  
 
-
 当たっているもの  
 ![51](newcomer3/newcomer3_7_ecfp4_in/1.png)
 ![52](newcomer3/newcomer3_7_ecfp4_in/2.png)
@@ -148,7 +148,12 @@ CHEMBL905613, CHEMBL3430218, CHEMBL905612の化合物で外れている割合が
 ![55](newcomer3/newcomer3_7_ecfp4_in/5.png)
 ![56](newcomer3/newcomer3_7_ecfp4_in/6.png)
 ![57](newcomer3/newcomer3_7_ecfp4_in/7.png)
-![58](newcomer3/newcomer3_7_ecfp4_in/8.png)
+![58](newcomer3/newcomer3_7_ecfp4_in/8.png)  
+
+
+ECFP4はある距離にある部分構造をハッシュ化してバイナリ変換したものである。このことから回帰を行う際には原子間の距離という情報が利用されているのではないかと考えた。  
+その際に真値よりも小さく予測しているものと大きく予測しているものを比較すると，全体として小さく予測した分子の方がシンプルな構造のように思われる。従って，ECFP4では分子内のある原子からの部分構造が小さい場合には半径が過大評価されている可能性があると考える。  
+実際に当たっているものの多くは，分子数が多く，長い一本鎖構造が多いように思われる。
 
 ### 3-7-3dの結果考察
 |Assay ID|テストデータの数|外れているデータの数|当たっているデータの数|
