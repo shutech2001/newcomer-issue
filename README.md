@@ -193,7 +193,9 @@ CHEMBL905613の化合物で外れている割合が高く，2D記述子, ECFP4�
 ![84](newcomer3/newcomer3_7_3d_in/4.png)
 ![85](newcomer3/newcomer3_7_3d_in/5.png)
 ![86](newcomer3/newcomer3_7_3d_in/6.png)
-![87](newcomer3/newcomer3_7_3d_in/7.png)
+![87](newcomer3/newcomer3_7_3d_in/7.png)  
+
+3D記述子は分子の3次元構造を記述したものであるため，膜透過のエネルギーについて考える際に重要となる基の情報や構造情報よりも原子間の距離や離心率，慣性モーメント等の情報が多いように思われる。そのため，3D記述子全体として回帰の精度が低いのではないかと考えた。
 
 
 
