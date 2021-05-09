@@ -85,8 +85,8 @@ Q^2 : 0.41783577938021654
 真値よりも大きく予測しているということは，![papp1](newcomer3/papp/1.gif)より，自由エネルギーを小さく見積もっていると考える。  
 そこで注目したのが，真値よりも小さく予測したものに共通する以下の2つの構造である。  
 ![考察1](newcomer3/newcomer_inquiry/1.jpg)
-![考察2](newcomer3/newcomer_inquiry/2.jpg)
-膜を透過するにはイオン形よりも分子形の方が良いとされている。2つ目の構造のみであれば，真値よりも大きく予測したものの中にも含まれているが，これら2つの構造を共に有するものは小さく予測されているため，この両端の構造を持つ場合には膜透過にエネルギーがより必要となると考えられる。  
+![考察2](newcomer3/newcomer_inquiry/2.jpg)  
+膜を透過するにはイオン形よりも分子形の方が良いとされている。2つ目の構造のみであれば，真値よりも大きく予測したものの中にも含まれているが，これら2つの構造を共に有するものは小さく予測されているため，この両端の構造を持つ場合には膜透過にエネルギーがより必要となると考えた。  
 
 
 当たっているもの  
@@ -115,29 +115,29 @@ Q^2 : 0.41783577938021654
 CHEMBL905613, CHEMBL3430218, CHEMBL905612の化合物で外れている割合が高く，2D記述子同様Astellasの化合物は当たっている。
 
 ##### 各分子の構造  
-外れているもの  
+外れているもの(真値よりも大きく予測)  
 ![21](newcomer3/newcomer3_7_ecfp4_out/1.png)
-![22](newcomer3/newcomer3_7_ecfp4_out/2.png)
 ![23](newcomer3/newcomer3_7_ecfp4_out/3.png)
 ![24](newcomer3/newcomer3_7_ecfp4_out/4.png)
 ![25](newcomer3/newcomer3_7_ecfp4_out/5.png)
 ![26](newcomer3/newcomer3_7_ecfp4_out/6.png)
 ![27](newcomer3/newcomer3_7_ecfp4_out/7.png)
 ![28](newcomer3/newcomer3_7_ecfp4_out/8.png)
+![31](newcomer3/newcomer3_7_ecfp4_out/11.png)
+![32](newcomer3/newcomer3_7_ecfp4_out/12.png)
+![33](newcomer3/newcomer3_7_ecfp4_out/13.png)
+![34](newcomer3/newcomer3_7_ecfp4_out/14.png)
+![37](newcomer3/newcomer3_7_ecfp4_out/17.png)
+![38](newcomer3/newcomer3_7_ecfp4_out/18.png)
+![39](newcomer3/newcomer3_7_ecfp4_out/19.png)
+![40](newcomer3/newcomer3_7_ecfp4_out/20.png)  
+外れているもの(真値よりも小さく予測)  
+![22](newcomer3/newcomer3_7_ecfp4_out/2.png)
 ![29](newcomer3/newcomer3_7_ecfp4_out/9.png)
 ![30](newcomer3/newcomer3_7_ecfp4_out/10.png)
-![31](newcomer3/newcomer3_7_ecfp4_out/10.png)
-![32](newcomer3/newcomer3_7_ecfp4_out/11.png)
-![33](newcomer3/newcomer3_7_ecfp4_out/12.png)
-![34](newcomer3/newcomer3_7_ecfp4_out/13.png)
-![35](newcomer3/newcomer3_7_ecfp4_out/14.png)
-![36](newcomer3/newcomer3_7_ecfp4_out/15.png)
-![37](newcomer3/newcomer3_7_ecfp4_out/16.png)
-![38](newcomer3/newcomer3_7_ecfp4_out/17.png)
-![39](newcomer3/newcomer3_7_ecfp4_out/18.png)
-![40](newcomer3/newcomer3_7_ecfp4_out/19.png)
-![41](newcomer3/newcomer3_7_ecfp4_out/21.png)
-
+![35](newcomer3/newcomer3_7_ecfp4_out/15.png)
+![36](newcomer3/newcomer3_7_ecfp4_out/16.png)
+![41](newcomer3/newcomer3_7_ecfp4_out/21.png)  
 
 
 当たっているもの  
@@ -164,23 +164,22 @@ CHEMBL905613, CHEMBL3430218, CHEMBL905612の化合物で外れている割合が
 CHEMBL905613の化合物で外れている割合が高く，2D記述子, ECFP4同様にAstellasの化合物は当たっている。
 
 ##### 各分子の構造  
-外れているもの  
+外れているもの(真値よりも大きく予測)  
 ![61](newcomer3/newcomer3_7_3d_out/1.png)
-![62](newcomer3/newcomer3_7_3d_out/2.png)
-![63](newcomer3/newcomer3_7_3d_out/3.png)
-![64](newcomer3/newcomer3_7_3d_out/4.png)
 ![65](newcomer3/newcomer3_7_3d_out/5.png)
 ![66](newcomer3/newcomer3_7_3d_out/6.png)
 ![67](newcomer3/newcomer3_7_3d_out/7.png)
 ![68](newcomer3/newcomer3_7_3d_out/8.png)
+![72](newcomer3/newcomer3_7_3d_out/12.png)
+![73](newcomer3/newcomer3_7_3d_out/13.png)  
+外れているもの(真値よりも小さく予測)  
+![62](newcomer3/newcomer3_7_3d_out/2.png)
+![63](newcomer3/newcomer3_7_3d_out/3.png)
+![64](newcomer3/newcomer3_7_3d_out/4.png)
 ![69](newcomer3/newcomer3_7_3d_out/9.png)
 ![70](newcomer3/newcomer3_7_3d_out/10.png)
 ![71](newcomer3/newcomer3_7_3d_out/11.png)
-![72](newcomer3/newcomer3_7_3d_out/12.png)
-![73](newcomer3/newcomer3_7_3d_out/13.png)
-![74](newcomer3/newcomer3_7_3d_out/14.png)
-
-
+![74](newcomer3/newcomer3_7_3d_out/14.png)  
 
 当たっているもの  
 ![81](newcomer3/newcomer3_7_3d_in/1.png)
