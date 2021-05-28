@@ -20,6 +20,10 @@ RUN pip install --upgrade pip && \
 	conda install lightgbm && \
 	conda install optuna && \
 	conda install pytorch && \
-	conda install xgboost
+	conda install xgboost && \
+	conda install xlrd && \
+	conda install openpyxl && \
+	conda install -c rdkit -c mordred-descriptor mordred && \
+	conda install -c conda-forge networkx=2.5
 
 WORKDIR /
